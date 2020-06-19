@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>
+Room 14 | Login
+</title>
+</head>
+<body>
+<h1 style="font-family:Roboto;text-align="center";font-size:20pt;
+color:#00FF00;>
+Room 14 Login Page
+</h1>
+<form name="login">
+Username<input type="text" name="userid"/>
+Password<input type="password" name="pswrd"/>
+<input type="button" onclick="check(this.form)" value="Login"/>
+<input type="reset" value="Cancel"/>
+</form>
+<script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.userid.value == "room14" && form.pswrd.value == "fairfield")
+  {
+    window.open('target.html')/*opens the target page while Id & password matches*/
+  }
+ else
+ {
+ if(form.userid.value == "room14"){
+   alert("Error, Incorrect Password")
+   }
+   else{
+   if(form.pswrd.value == "fairfield"){
+   alert("Error, Incorrect Username")
+   }
+   else
+   {
+   alert("Error, Incorrect Password And Username")
+   }
+   
+   }
+  }
+}
+</script>
+</body>
+</html>
