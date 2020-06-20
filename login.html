@@ -18,18 +18,7 @@ Password<input type="seeornosee" name="pswrd"/>
 </form>
                                    <button onclick="seeornoseechange()">ಠ ಠ</button>
 <script language="javascript">
-var seeornosee = "password";                             
-function seeornoseechange()
-{
- if (seeornosee == "password"){
-seeornosee = "text";
-                   }
- else{
-    seeornose = "password";
-    }
-                            }
-
-function check(form)/*function to check userid & password*/
+                             function check(form)/*function to check userid & password*/
 {
  /*the following code checkes whether the entered userid and password are matching*/
  if(form.userid.value == "room14" && form.pswrd.value == "fairfield")
@@ -51,6 +40,18 @@ function check(form)/*function to check userid & password*/
    }
    
    }
+var seeornosee = "password";                             
+function seeornoseechange()
+{
+ if (seeornosee == "password"){
+seeornosee = "text";
+                   }
+ else{
+    seeornose = "password";
+    }
+                            }
+
+
   }
 }
 </script>
