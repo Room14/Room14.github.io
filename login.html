@@ -12,15 +12,16 @@ Room 14 Login Page
 <form name="login">
 Username<input type="text" name="userid"/>
 Password<input type="seeornosee" name="pswrd"/>
-<input type="button" onclick="seeornoseechange()" value="ಠ ಠ"/>                                             
+                                                                                         
 <input type="button" onclick="check(this.form)" value="Login"/>
 <input type="reset" value="Cancel"/>
 </form>
+                                   <button onclick="seeornoseechange()">ಠ ಠ</button>
 <script language="javascript">
 var seeornosee = "password";                             
 function seeornoseechange()
 {
- if seeornosee == "password"{
+ if (seeornosee == "password"){
 seeornosee = "text";
  else{
     seeornose = "password";
