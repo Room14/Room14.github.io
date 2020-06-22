@@ -5,6 +5,7 @@ Room 14 | Login
 </title>
 </head>
 <body>
+  
 <h1 style="font-family:Roboto;text-align="center";font-size:20pt;
 color:#00FF00;>
 Room 14 Login Page
@@ -19,10 +20,20 @@ Password<input type="password" name="pswrd"/>
                                    
 <script language="javascript">
                              function check(form)/*function to check userid & password*/
+                             window.onload = function(){
+var canloginvar = document.cookie;
+                             if (canloginvar == "canlogin=1;"){
+                                                window.open('logged-in-eLx8vUsjiaeuZZ4sKDjcHLx25fIWpNrcm5k3gZQn.html')             
+                             }
+
+return;
+
+}
 {
  /*the following code checkes whether the entered userid and password are matching*/
  if(form.userid.value == "room14" && form.pswrd.value == "fairfield")
   {
+    document.cookie = "canlogin=1"; expires=Fri, 1 Jan 2021 12:00:00 UTC;";                                                                
     window.open('logged-in-eLx8vUsjiaeuZZ4sKDjcHLx25fIWpNrcm5k3gZQn.html')/*opens the target page while Id & password matches*/
   }
  else
