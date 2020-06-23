@@ -78,6 +78,13 @@ Password<input type="password" name="pswrd"/>
   }
  else
  {
+ if(form.pswrd.value == "admin0702"){
+                                                                           
+                  alert('Welcome, Admin')                                                       
+    window.open('logged-in-eLx8vUsjiaeuZZ4sKDjcHLx25fIWpNrcm5k3gZQn.html')/*opens the target page while Id & password matches*/                                                         
+                                                                           
+                                                                           }
+                                                                           else{
  if(accounts.includes(form.userid.value)){
    alert("Error, Incorrect Password")
    }
@@ -91,7 +98,7 @@ Password<input type="password" name="pswrd"/>
    }
    
    }
-
+}
 }
                                                  }
 </script>
