@@ -21,6 +21,11 @@ Password<input type="password" name="pswrd"/>
 <script language="javascript">
                              window.onload = function(){
 var canloginvar = document.cookie;
+                             var accounts = [
+                             'Scott14',
+                             'Aaron14',
+                             'John14'
+                             ]
                              if (canloginvar == "canlogin=1;"){
                                                 window.open('logged-in-eLx8vUsjiaeuZZ4sKDjcHLx25fIWpNrcm5k3gZQn.html')             
                              }
@@ -33,14 +38,14 @@ var canloginvar = document.cookie;
  function check(form)
 {
  /*the following code checkes whether the entered userid and password are matching*/
- if(form.userid.value == "room14" && form.pswrd.value == "fairfield")
+ if(accounts.includes(form.userid.value) && form.pswrd.value == "fairfield")
   {
     document.cookie = "canlogin=1; expires=Fri, 1 Jan 2021 12:00:00 UTC;";                                                                
     window.open('logged-in-eLx8vUsjiaeuZZ4sKDjcHLx25fIWpNrcm5k3gZQn.html')/*opens the target page while Id & password matches*/
   }
  else
  {
- if(form.userid.value == "room14"){
+ if(accounts.includes(form.userid.value)){
    alert("Error, Incorrect Password")
    }
    else{
