@@ -71,25 +71,18 @@ Password<input type="password" name="pswrd"/>
                              
                              
  /*the following code checkes whether the entered userid and password are matching*/
- if(accounts.includes(form.userid.value) && form.pswrd.value == "fairfield")
+ if(accounts.includes(form.userid.value) && passwords.includes(form.pswrd.value))
   {
              alert('Welcome, '+form.pswrd.value)                                                       
     window.open('logged-in-eLx8vUsjiaeuZZ4sKDjcHLx25fIWpNrcm5k3gZQn.html')/*opens the target page while Id & password matches*/
   }
  else
  {
- if(form.pswrd.value == "admin0702"){
-                                                                           
-                  alert('Welcome, Admin')                                                       
-    window.open('logged-in-eLx8vUsjiaeuZZ4sKDjcHLx25fIWpNrcm5k3gZQn.html')/*opens the target page while Id & password matches*/                                                         
-                                                                           
-                                                                           }
-                                                                           else{
  if(accounts.includes(form.userid.value)){
    alert("Error, Incorrect Password")
    }
    else{
-   if(form.pswrd.value == "fairfield"){
+   if(passwords.includes(form.pswrd.value)){
    alert("Error, Incorrect Username")
    }
    else
@@ -97,8 +90,7 @@ Password<input type="password" name="pswrd"/>
    alert("Error, Incorrect Password And Username")
    }
    
-   }
-}
+   }                                                                                   
 }
                                                  }
 </script>
