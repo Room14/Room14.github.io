@@ -71,7 +71,7 @@ Password<input type="password" name="pswrd"/>
                              
                              
  /*the following code checkes whether the entered userid and password are matching*/
- if(accounts.includes(form.userid.value) && passwords.includes(form.pswrd.value))
+ if(accounts.includes(form.userid.value) && form.pswrd.value == 'fairfield')
   {
              alert('Welcome, '+form.pswrd.value)                                                       
     window.open('logged-in-eLx8vUsjiaeuZZ4sKDjcHLx25fIWpNrcm5k3gZQn.html')/*opens the target page while Id & password matches*/
@@ -82,7 +82,7 @@ Password<input type="password" name="pswrd"/>
    alert("Error, Incorrect Password")
    }
    else{
-   if(passwords.includes(form.pswrd.value)){
+   if(form.pswrd.value == 'fairfield'){
    alert("Error, Incorrect Username")
    }
    else
