@@ -100,13 +100,23 @@ Password<input type="password" name="pswrd"/>
                              'hiiiii',
                              'fairfield'
                              ]
+                             var admins = [
+                               'aaronz20',
+                               'scottm19'
+                             ]
                              
                              
  /*the following code checkes whether the entered userid and password are matching*/
  if(accounts.includes(form.userid.value) && form.pswrd.value == 'fairfield')
   {
+    if(admins.includes(form.userid.value)){
+      alert('Welcome, Admin!')
+      window.open('admin-oGp2rRCKElH5oTM07s01vitlh4JfbXg9nm6F3eHo.html')
+    }
+    else{
              alert('Welcome, '+form.userid.value)                                                       
     window.open('logged-in-eLx8vUsjiaeuZZ4sKDjcHLx25fIWpNrcm5k3gZQn.html')/*opens the target page while Id & password matches*/
+    }
   }
  else
  {
