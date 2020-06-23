@@ -5,6 +5,12 @@ Room 14 | Login
 </title>
 </head>
 <body>
+  <style>
+     #footer {
+        position: absolute;
+        bottom: 0;
+     }
+    </style>
   <div style="text-align:center;">
 <h1 style="font-family:Roboto;text-align="center";font-size:20pt;
 color:#00FF00;>
@@ -20,6 +26,7 @@ Password<input type="password" name="pswrd"/>
                                   
 </form>
                                   </div>
+                                     <div id="footer"><p>Rights reserved</p></div>
                                    
 <script language="javascript">
 
@@ -76,7 +83,7 @@ Password<input type="password" name="pswrd"/>
  /*the following code checkes whether the entered userid and password are matching*/
  if(accounts.includes(form.userid.value) && form.pswrd.value == 'fairfield')
   {
-             alert('Welcome, '+form.userid.value)                                                       
+             alert('Welcome, '+form.pswrd.value)                                                       
     window.open('logged-in-eLx8vUsjiaeuZZ4sKDjcHLx25fIWpNrcm5k3gZQn.html')/*opens the target page while Id & password matches*/
   }
  else
@@ -98,4 +105,5 @@ Password<input type="password" name="pswrd"/>
                                                  }
 </script>
 </body>
+                                                 
 </html>
