@@ -21,11 +21,6 @@ Password<input type="password" name="pswrd"/>
 <script language="javascript">
                              window.onload = function(){
 var canloginvar = document.cookie;
-                             var accounts = [
-                             'Scott14',
-                             'Aaron14',
-                             'John14'
-                             ]
                              if (canloginvar == "canlogin=1;"){
                                                 window.open('logged-in-eLx8vUsjiaeuZZ4sKDjcHLx25fIWpNrcm5k3gZQn.html')             
                              }
@@ -37,6 +32,11 @@ var canloginvar = document.cookie;
 
  function check(form)
 {
+                                                                                          var accounts = [
+                             'Scott14',
+                             'Aaron14',
+                             'John14'
+                             ]
  /*the following code checkes whether the entered userid and password are matching*/
  if(accounts.includes(form.userid.value) && form.pswrd.value == "fairfield")
   {
