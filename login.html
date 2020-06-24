@@ -1,44 +1,48 @@
 <html>
+
 <head>
   <title>Room 14 | Login</title>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
 </head>
-  <style>
-     #footer {
-        position: absolute;
-        bottom: 0;
-     }
-    </style>
-<body class="text-center">
-  
-  <div >
-<h1 class="text-success m-3">
-Room 14 Login Page
-</h1>
+<style>
+  #footer {
+    position: absolute;
+    bottom: 0;
+  }
+</style>
 
-<div class="row justify-content-md-center">
-<form class="col-md-6 text-center">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Username</label>
-    <input type="text" class="form-control" name="userid" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <small id="emailHelp" class="form-text text-muted">Name + First letter of last name + what year you entered fairfield. No capitals!</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" name="pswrd">
-  </div>
-  <!-- <div class="form-group form-check">
+<body class="text-center">
+
+  <div>
+    <h1 class="text-success m-3">
+      Room 14 Login Page
+    </h1>
+
+    <div class="row justify-content-md-center">
+      <form class="col-md-6 text-center">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Username</label>
+          <input type="text" class="form-control" name="userid" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted">Name + First letter of last name + what year you entered
+            fairfield. No capitals!</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="pswrd">
+        </div>
+        <!-- <div class="form-group form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div> -->
-  <button type="button" class="btn btn-primary" onclick="check(this.form)">Login</button>
-</form>
+        <button type="button" class="btn btn-primary" onclick="check(this.form)">Login</button>
+      </form>
 
-</div>
-                                                 
-<!-- <form name="login">
+    </div>
+
+    <!-- <form name="login">
 Username<input type="text" name="userid"/>
 Password<input type="password" name="pswrd"/>
                                                                                          
@@ -47,104 +51,99 @@ Password<input type="password" name="pswrd"/>
                                   
 </form>-->
 
-<div id="footer" class="text-left">
-  <p>Room 14 FIS | Contact - Email:room14.website.contact@gmail.com | Glitches/Errors - Email:room14.website.contact@gmail.com  </p>
-</div>
-                                   
-<script language="javascript">
+    <div id="footer" class="text-left">
+      <p>Room 14 FIS | Contact - Email:room14.website.contact@gmail.com | Glitches/Errors -
+        Email:room14.website.contact@gmail.com </p>
+    </div>
 
-                            
-                             
+    <script language="javascript">
+      function check(form) {
+        var accounts = [
+          'isabelleb20',
+          'ellab20',
+          'hunterc20',
+          'maisied20',
+          'jessd20',
+          'jacksonh20',
+          'johnh20',
+          'archiej20',
+          'annabelk20',
+          'oliverl20',
+          'husainm20',
+          'elizabethm20',
+          'arin20',
+          'camerono20',
+          'natashao20',
+          'ebens20',
+          'jarvisx20',
+          'aaronz20',
+          'joelc19',
+          'brendanc19',
+          'amyd19',
+          'judahd19',
+          'sukhmanpreetk19',
+          'heidil19',
+          'caram19',
+          'aaminahm19',
+          'luciem19',
+          'scottm19',
+          'emerym19',
+          'lucasr19',
+          'biancas19',
+          'matthewt19',
+          'emilyt19',
+          'danielt19',
+          'vboswell'
+        ]
+        var passwords = [
+          'im good',
+          'hiiiii',
+          'fairfield'
+        ]
+        var admins = [
+          'aaronz20',
+          'scottm19',
+          'vboswell'
+        ]
 
 
+        /*the following code checkes whether the entered userid and password are matching*/
+        if (accounts.includes(form.userid.value) && form.pswrd.value == 'fairfield') {
+          if (admins.includes(form.userid.value)) {
+            alert('Welcome, Admin!')
+            window.open('admin-oGp2rRCKElH5oTM07s01vitlh4JfbXg9nm6F3eHo.html')
+          } else {
+            alert('Welcome, ' + form.userid.value)
+            window.open(
+              'logged-in-eLx8vUsjiaeuZZ4sKDjcHLx25fIWpNrcm5k3gZQn.html') /*opens the target page while Id & password matches*/
+          }
+        } else {
+          if (accounts.includes(form.userid.value)) {
+            alert("Error, Incorrect Password")
+          } else {
+            if (form.pswrd.value == 'fairfield') {
+              alert("Error, Incorrect Username")
+            } else {
+              alert("Error, Incorrect Password And Username")
+            }
 
- function check(form)
-{
-                                                                                          var accounts = [
-                             'isabelleb20',
-                             'ellab20',
-                             'hunterc20',
-                             'maisied20',
-                             'jessd20',
-                             'jacksonh20',
-                             'johnh20',
-                             'archiej20',
-                             'annabelk20',
-                             'oliverl20',
-                             'husainm20',
-                             'elizabethm20',
-                             'arin20',
-                             'camerono20',
-                             'natashao20',
-                             'ebens20',
-                             'jarvisx20',
-                             'aaronz20',
-                             'joelc19',
-                             'brendanc19',
-                             'amyd19',
-                             'judahd19',
-                             'sukhmanpreetk19',
-                             'heidil19',
-                             'caram19',
-                             'aaminahm19',
-                             'luciem19',
-                             'scottm19',
-                             'emerym19',
-                             'lucasr19',
-                             'biancas19',
-                             'matthewt19',
-                             'emilyt19',
-                             'danielt19',
-                             'vboswell'                                                               
-                             ]
-                             var passwords = [
-                             'im good',
-                             'hiiiii',
-                             'fairfield'
-                             ]
-                             var admins = [
-                               'aaronz20',
-                               'scottm19',
-                               'vboswell'
-                             ]
-                             
-                             
- /*the following code checkes whether the entered userid and password are matching*/
- if(accounts.includes(form.userid.value) && form.pswrd.value == 'fairfield')
-  {
-    if(admins.includes(form.userid.value)){
-      alert('Welcome, Admin!')
-      window.open('admin-oGp2rRCKElH5oTM07s01vitlh4JfbXg9nm6F3eHo.html')
-    }
-    else{
-             alert('Welcome, '+form.userid.value)                                                       
-    window.open('logged-in-eLx8vUsjiaeuZZ4sKDjcHLx25fIWpNrcm5k3gZQn.html')/*opens the target page while Id & password matches*/
-    }
-  }
- else
- {
- if(accounts.includes(form.userid.value)){
-   alert("Error, Incorrect Password")
-   }
-   else{
-   if(form.pswrd.value == 'fairfield'){
-   alert("Error, Incorrect Username")
-   }
-   else
-   {
-   alert("Error, Incorrect Password And Username")
-   }
-   
-   }                                                                                   
-}
-                                                 }
-</script>
+          }
+        }
+      }
+    </script>
 
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
 
 </body>
+
 </html>
