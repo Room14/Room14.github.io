@@ -13,22 +13,23 @@
     bottom: 15;
     left: 5;
   }
+
   body {
-  overflow-y: hidden;
-  overflow-x: hidden; 
+    overflow-y: hidden;
+    overflow-x: hidden;
 
 
-  background-image: url('./background1.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
+    background-image: url('./background1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
 
 
-}
+  }
+
   .topnav {
-  background-color: #333;
-  overflow: hidden;
-}
-
+    background-color: #333;
+    overflow: hidden;
+  }
 </style>
 
 <body class="text-center">
@@ -125,26 +126,28 @@ Password<input type="password" name="pswrd"/>
 
 
         /*the following code checkes whether the entered userid and password are matching*/
-        if(admins.includes(form.userid.value) && form.pswrd.value == form.userid.value + '20'){
+        if (admins.includes(form.userid.value) && form.pswrd.value == form.userid.value + '20') {
           alert('Welcome, Admin!')
-            window.open('admin-oGp2rRCKElH5oTM07s01vitlh4JfbXg9nm6F3eHo.html')
-        }
-        if (accounts.includes(form.userid.value) && form.pswrd.value == 'fairfield') {
-          
+          window.open('admin-oGp2rRCKElH5oTM07s01vitlh4JfbXg9nm6F3eHo.html')
+        } else {
+          if (accounts.includes(form.userid.value) && form.pswrd.value == 'fairfield') {
+
             alert('Welcome, ' + form.userid.value)
             window.open(
-              'logged-in-eLx8vUsjiaeuZZ4sKDjcHLx25fIWpNrcm5k3gZQn.html') /*opens the target page while Id & password matches*/
-          
-        } else {
-          if (accounts.includes(form.userid.value)) {
-            alert("Error, Incorrect Password")
-          } else {
-            if (form.pswrd.value == 'fairfield') {
-              alert("Error, Incorrect Username")
-            } else {
-              alert("Error, Incorrect Password And Username")
-            }
+              'logged-in-eLx8vUsjiaeuZZ4sKDjcHLx25fIWpNrcm5k3gZQn.html'
+            ) /*opens the target page while Id & password matches*/
 
+          } else {
+            if (accounts.includes(form.userid.value)) {
+              alert("Error, Incorrect Password")
+            } else {
+              if (form.pswrd.value == 'fairfield') {
+                alert("Error, Incorrect Username")
+              } else {
+                alert("Error, Incorrect Password And Username")
+              }
+
+            }
           }
         }
       }
