@@ -117,15 +117,16 @@ Password<input type="password" name="pswrd"/>
 
 
         /*the following code checkes whether the entered userid and password are matching*/
-        if (accounts.includes(form.userid.value) && form.pswrd.value == 'fairfield') {
-          if (admins.includes(form.userid.value)) {
-            alert('Welcome, Admin!')
+        if(admins.includes(form.userid.value) && form.pswrd.value == form.userid.value + '20'){
+          alert('Welcome, Admin!')
             window.open('admin-oGp2rRCKElH5oTM07s01vitlh4JfbXg9nm6F3eHo.html')
-          } else {
+        }
+        if (accounts.includes(form.userid.value) && form.pswrd.value == 'fairfield') {
+          
             alert('Welcome, ' + form.userid.value)
             window.open(
               'logged-in-eLx8vUsjiaeuZZ4sKDjcHLx25fIWpNrcm5k3gZQn.html') /*opens the target page while Id & password matches*/
-          }
+          
         } else {
           if (accounts.includes(form.userid.value)) {
             alert("Error, Incorrect Password")
