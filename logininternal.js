@@ -1,4 +1,31 @@
- function check(form) {
+/*
+this is the code for the login page,
+you will see a file called "testencodedjs.js",
+that file has all of the code for the login page
+but it is all encoded so you can't view usernames.
+
+if you want to make changes to the login javascript
+then edit this file to what you want to change
+once that is done, copy this file's code
+and go to a website called "obfuscator.io"
+on that site scroll down and make sure the settings
+match the ones in the image at "./images/Screenshot (7).png".
+Then paste the code and click Obfuscate,
+it will then output some encoded code,
+copy this and replace the code in "testencodedjs.js"
+with that code.
+
+Its easier than it sounds
+Scott.
+
+
+*/
+
+
+
+
+
+function check(form) {
         var accounts = [
           'isabelleb20',
           'ellab20',
