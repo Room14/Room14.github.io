@@ -8,6 +8,7 @@ import HeaderPresent from "./components/header/HeaderPresent";
 import FooterPresent from "./components/footer/FooterPresent";
 import ReduxApp from "./components/reduxApp/ReduxApp";
 import Notices from "./components/notices/Notices";
+import Newsletters from "./components/newsletters/Newsletters";
 import { REACTPATH } from "./constants/config";
 
 export default class ReactApp extends React.Component {
@@ -22,6 +23,7 @@ export default class ReactApp extends React.Component {
             <Route path={REACTPATH.Website} component={WebsiteApp} />
             <Route path={REACTPATH.Redux} component={ReduxApp} />
             <Route path={REACTPATH.Notices} component={Notices} />
+            <Route path={REACTPATH.Newsletters} component={Newsletters} />
             <Route component={WebsiteApp} />
           </Switch>
         </div>

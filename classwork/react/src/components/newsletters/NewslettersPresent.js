@@ -3,20 +3,20 @@ import PropTypes from "prop-types";
 // import WebsiteAppResults from "./WebsiteAppResults";
 // import WebsiteAppFileContent from "./WebsiteAppFileContent";
 
-const NoticesPresent = ({
-  noticesData,
+const NewslettersPresent = ({
+  newslettersData,
 }) => {
   return (
     <div className="mt-1 mb-5 pt-1 pb-5 pl-4 text-dark">
       <div className="text-secondary mb-3">
         <h2>
-        FIS Notices
+        FIS Newsletters
         </h2>
       </div>
   <div>
 
-  {noticesData.length > 0 &&
-        noticesData.map((item, index) => (
+  {newslettersData.length > 0 &&
+        newslettersData.map((item, index) => (
           <div className="row text-left border-bottom p-3" key={index}>
             <div className="col-md">
               <span className="badge badge-secondary">{index + 1}</span>{" "}
@@ -27,7 +27,8 @@ const NoticesPresent = ({
               >
                 {item.name}
               </a>
-              {index < 2 && <embed src={item.url} className="embed-responsive" height="800px" />}
+              {index < 1 && <embed src={item.url} className="embed-responsive" height="800px" />}
+              {/* <embed src={item.url} className="embed-responsive" height="800px" /> */}
             </div>
           </div>
         ))}
@@ -36,8 +37,8 @@ const NoticesPresent = ({
   );
 };
 
-NoticesPresent.propTypes = {
-  noticesData: PropTypes.array
+NewslettersPresent.propTypes = {
+  newslettersData: PropTypes.array
 };
 
-export default NoticesPresent;
+export default NewslettersPresent;

@@ -4,7 +4,8 @@ export const REACTPATH = {
   Axios: "/axios2",
   Redux: "/redux3",
   Website: "/document",
-  Notices: "/fisNotices"
+  Notices: "/fisNotices",
+  Newsletters: "/fisNewsletters"
 };
 
 export const REDUXPATH = {
