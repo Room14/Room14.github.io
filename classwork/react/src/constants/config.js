@@ -5,7 +5,8 @@ export const REACTPATH = {
   Redux: "/redux3",
   Website: "/document",
   Notices: "/fisNotices",
-  Newsletters: "/fisNewsletters"
+  Newsletters: "/fisNewsletters",
+  Calendar: "/fisCalendar"
 };
 
 export const REDUXPATH = {

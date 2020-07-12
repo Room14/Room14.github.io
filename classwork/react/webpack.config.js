@@ -28,7 +28,7 @@ module.exports = {
     inline: true,
     progress: true,
     hot: true,
-    port: 9999,
+    port: 2020,
   },
   plugins: [
     new CleanWebpackPlugin(),

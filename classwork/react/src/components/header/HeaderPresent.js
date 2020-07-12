@@ -10,10 +10,10 @@ const HeaderPresent = () => {
   return (
     <div className="container-fluid top-container header">
       <h1 className="text-center text-success">Room 14 FIS</h1>
-      {/* <nav className="navbar navbar-expand-md bg-dark navbar-dark">
+      <nav className="navbar navbar-expand-md bg-dark navbar-dark">
         <NavLink to="/" className="navbar-brand">
           <i className="fab fa-react mr-1"></i>
-          React Examples
+          Room 14
         </NavLink>
 
         <button
@@ -29,44 +29,44 @@ const HeaderPresent = () => {
           <ul className="navbar-nav">
             <li className="nav-item">
               <NavLink
-                to={REACTPATH.Basic}
+                to={REACTPATH.Notices}
                 className="nav-link"
                 onClick={() => hideNavbar("")}
               >
-                Basic React
+                FIS Notices
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink
-                to={REACTPATH.Axios}
+                to={REACTPATH.Newsletters}
                 className="nav-link"
                 onClick={() => hideNavbar("")}
               >
-                Axios API
+                FIS Newsletters
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                to={REACTPATH.Calendar}
+                className="nav-link"
+                onClick={() => hideNavbar("")}
+              >
+                FIS Calendar
+              </NavLink>
+            </li>
+
             <li className="nav-item">
               <NavLink
                 to={REACTPATH.Website}
                 className="nav-link"
                 onClick={() => hideNavbar("")}
               >
-                Github API
-              </NavLink>
-            </li>
-
-            <li className="nav-item">
-              <NavLink
-                to={REACTPATH.Redux + REDUXPATH.SearchVideos}
-                className="nav-link"
-                onClick={() => hideNavbar("")}
-              >
-                Redux Saga
+                Room 14 Classwork
               </NavLink>
             </li>
           </ul>
         </div>
-      </nav> */}
+      </nav>
     </div>
   );
 };
