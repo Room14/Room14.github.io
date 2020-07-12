@@ -27,6 +27,15 @@ const HeaderPresent = () => {
 
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
           <ul className="navbar-nav">
+          <li className="nav-item">
+              <NavLink
+                to={REACTPATH.Weather}
+                className="nav-link"
+                onClick={() => hideNavbar("")}
+              >
+                Weather
+              </NavLink>
+            </li>
             <li className="nav-item">
               <NavLink
                 to={REACTPATH.Notices}

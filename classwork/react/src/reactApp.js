@@ -10,6 +10,7 @@ import ReduxApp from "./components/reduxApp/ReduxApp";
 import Notices from "./components/notices/Notices";
 import Newsletters from "./components/newsletters/Newsletters";
 import Calendar from "./components/calendar/Calendar";
+import Weather from "./components/weather/Weather";
 import { REACTPATH } from "./constants/config";
 
 export default class ReactApp extends React.Component {
@@ -26,6 +27,7 @@ export default class ReactApp extends React.Component {
             <Route path={REACTPATH.Notices} component={Notices} />
             <Route path={REACTPATH.Newsletters} component={Newsletters} />
             <Route path={REACTPATH.Calendar} component={Calendar} />
+            <Route path={REACTPATH.Weather} component={Weather} />
             <Route component={WebsiteApp} />
           </Switch>
         </div>

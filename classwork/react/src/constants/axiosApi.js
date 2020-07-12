@@ -102,5 +102,26 @@ export const getFisJson = axios.create({
     "Content-Type": "application/json",
   },
 });
+// http://pro.openweathermap.org/data/2.5/forecast/hourly?id=2190324&appid=2e47754a16a8eeba697daad62980819d
+// api.openweathermap.org/data/2.5/weather?id=2190324&appid=2e47754a16a8eeba697daad62980819d
+// https://api.openweathermap.org/data/2.5/onecall?lon=175.287689&lat=-37.787689&exclude=&appid=2e47754a16a8eeba697daad62980819d
+
+
+
+export const getWeatherJson = axios.create({
+  baseURL:
+    "http://api.openweathermap.org/data/2.5/",
+  timeout: 3000,
+  responseType: "json",
+  
+  params: {
+    appid: "2e47754a16a8eeba697daad62980819d",
+    units:"metric"
+  },
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
+
 
 export default packagistApi;
