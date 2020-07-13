@@ -12,7 +12,8 @@ export default class Weather extends Component {
     super(props);
 
     this.state = {
-      weatherData: []
+      weatherData: [],
+      dailyData: []
     };
   }
 
@@ -32,9 +33,10 @@ export default class Weather extends Component {
       console.log(error, error.response);
     });
 
-    if (results.data) {
+    if (results) {
         this.setState({
           weatherData: results.data.hourly,
+          dailyData: results.data.daily
         });
     }
     console.log("weather:",results);
@@ -45,6 +47,7 @@ export default class Weather extends Component {
       <div className="text-center">
         <WeatherPresent
           weatherData={this.state.weatherData}
+          dailyData={this.state.dailyData}
         />
       </div>
     );

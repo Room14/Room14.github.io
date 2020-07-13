@@ -5,7 +5,7 @@ const FooterPresent = () => {
   return (
     <div className="container-fluid top-container footer">
       <div className="mt-5 mb-3 p-4 bg-secondary text-light text-center">
-        Page loaded at {new Date().toLocaleDateString()} -
+        Page loaded at {new Date().toLocaleDateString()} -  
         {new Date().toLocaleTimeString()}
         <div className="mt-3">
           <a

@@ -33,6 +33,7 @@ const HeaderPresent = () => {
                 className="nav-link"
                 onClick={() => hideNavbar("")}
               >
+                <i className="fas fa-cloud-sun mr-1"></i>
                 Weather
               </NavLink>
             </li>
@@ -42,6 +43,7 @@ const HeaderPresent = () => {
                 className="nav-link"
                 onClick={() => hideNavbar("")}
               >
+                <i className="fas fa-newspaper mr-1"></i>
                 FIS Notices
               </NavLink>
             </li>
@@ -51,6 +53,7 @@ const HeaderPresent = () => {
                 className="nav-link"
                 onClick={() => hideNavbar("")}
               >
+                <i className="far fa-newspaper mr-1"></i>
                 FIS Newsletters
               </NavLink>
             </li>
@@ -60,6 +63,7 @@ const HeaderPresent = () => {
                 className="nav-link"
                 onClick={() => hideNavbar("")}
               >
+               <i class="far fa-calendar-alt mr-1"></i>
                 FIS Calendar
               </NavLink>
             </li>
@@ -70,6 +74,7 @@ const HeaderPresent = () => {
                 className="nav-link"
                 onClick={() => hideNavbar("")}
               >
+                <i class="fas fa-graduation-cap mr-1"></i>
                 Room 14 Classwork
               </NavLink>
             </li>

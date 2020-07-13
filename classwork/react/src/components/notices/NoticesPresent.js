@@ -10,6 +10,7 @@ const NoticesPresent = ({
     <div className="mt-1 mb-5 pt-1 pb-5 pl-4 text-dark">
       <div className="text-secondary mb-3">
         <h2>
+        <i className="fas fa-newspaper mr-1"></i>
         FIS Notices
         </h2>
       </div>
