@@ -78,7 +78,6 @@ const HeaderPresent = () => {
                 Room 14 Newsletters
               </NavLink>
             </li>
-
             <li className="nav-item">
               <NavLink
                 to={REACTPATH.Website}
@@ -88,6 +87,16 @@ const HeaderPresent = () => {
                 <i className="fas fa-graduation-cap mr-1"></i>
                 Room 14 Classwork
               </NavLink>
+            </li>
+            <li className="nav-item">
+              <a
+                href="https://room14.github.io/login.html"
+                className="nav-link"
+                onClick={() => hideNavbar("")}
+              >
+                <i className="fas fa-sign-in-alt mr-1"></i>
+                Room 14 Classwork
+              </a>
             </li>
           </ul>
         </div>
