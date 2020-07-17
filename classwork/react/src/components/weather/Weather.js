@@ -1,11 +1,9 @@
 /* eslint-disable no-undef */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import {
-  getWeatherJson,
-} from "../../constants/axiosApi";
+import { getWeatherJson, githubRepository } from "../../constants/axiosApi";
 import WeatherPresent from "./WeatherPresent";
-import moment from "moment"
+import moment from "moment";
 
 export default class Weather extends Component {
   constructor(props) {
@@ -13,13 +11,13 @@ export default class Weather extends Component {
 
     this.state = {
       weatherData: [],
-      dailyData: []
+      dailyData: [],
     };
   }
 
   componentDidMount() {
     this.getWeather("/onecall?lon=175.287689&lat=-37.787689");
-    
+
     // this.listAllFiles();
     console.log("componentDidMount", this.state);
   }
@@ -27,19 +25,19 @@ export default class Weather extends Component {
   componentDidUpdate() {
     console.log("componentDidUpdate", this.state);
   }
- 
+
   async getWeather(fileName) {
     const results = await getWeatherJson.get(fileName).catch((error) => {
       console.log(error, error.response);
     });
 
     if (results) {
-        this.setState({
-          weatherData: results.data.hourly,
-          dailyData: results.data.daily
-        });
+      this.setState({
+        weatherData: results.data.hourly,
+        dailyData: results.data.daily,
+      });
     }
-    console.log("weather:",results);
+    console.log("weather:", results);
     return results;
   }
   render() {

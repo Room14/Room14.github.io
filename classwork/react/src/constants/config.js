@@ -8,6 +8,7 @@ export const REACTPATH = {
   Newsletters: "/fisNewsletters",
   Calendar: "/fisCalendar",
   Weather: "/weather",
+  Rm14newsletters: "/14newsletters",
 };
 
 export const REDUXPATH = {

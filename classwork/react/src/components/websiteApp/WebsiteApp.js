@@ -16,11 +16,13 @@ export default class WebsiteApp extends Component {
 
     this.state = {
       keyword: "",
+      answer: "",
       searchResults: [],
       config: null,
       fileContent: null,
       total: null,
       loading: false,
+      submittedAnswer: "",
     };
 
     this.handleFieldChange = this.handleFieldChange.bind(this);
@@ -61,9 +63,21 @@ export default class WebsiteApp extends Component {
       this.setState({
         keyword: "",
       });
+    } else if (event.target.name == "answer") {
+      this.setState({
+        answer: event.target.value.trim(),
+      });
     }
 
     console.log(this.state);
+  };
+
+  handleAnswerSubmit = (event) => {
+    event.preventDefault();
+    this.setState({
+      submittedAnswer: this.state.answer.toUpperCase(),
+    });
+    console.log(this.state.submittedAnswer);
   };
 
   handleSearchSubmit = (event) => {
@@ -102,7 +116,7 @@ export default class WebsiteApp extends Component {
           loading: false,
           fileContent:
             githubRepository.axiosErrorMsg +
-            "<div class='text-danger'>" +
+            "<div className='text-danger'>" +
             error.response.data.message +
             "</div>",
         });
@@ -137,7 +151,7 @@ export default class WebsiteApp extends Component {
         loading: false,
         fileContent:
           githubRepository.axiosErrorMsg +
-          "<div class='text-danger'>" +
+          "<div className='text-danger'>" +
           error.response.data.message +
           "</div>",
       });
@@ -188,7 +202,10 @@ export default class WebsiteApp extends Component {
           fileContent={this.state.fileContent}
           handleFieldChange={this.handleFieldChange}
           handleSearchSubmit={this.handleSearchSubmit}
+          handleAnswerSubmit={this.handleAnswerSubmit}
           loading={this.state.loading}
+          answer={this.state.answer}
+          submittedAnswer={this.state.submittedAnswer}
         />
 
         {/* <RelatedFiles>

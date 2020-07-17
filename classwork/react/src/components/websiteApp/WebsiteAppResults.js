@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const WWebsiteAppResults = ({
+const WebsiteAppResults = ({
   total,
   searchResults,
   handleFieldChange,
@@ -44,19 +44,19 @@ const WWebsiteAppResults = ({
       {total === 0 && <div className="text-danger">No result</div>}
       {total > 0 && searchResults.length != total && (
         <div className="text-danger m-3">
-          Found {searchResults.length} {searchResults.length == 1 ? 'result' : 'results'}
-           in {total}
+          Found {searchResults.length}{" "}
+          {searchResults.length == 1 ? "result" : "results"} in {total}
         </div>
       )}
     </>
   );
 };
 
-WWebsiteAppResults.propTypes = {
+WebsiteAppResults.propTypes = {
   total: PropTypes.number,
   searchResults: PropTypes.array,
   handleFieldChange: PropTypes.func,
   loading: PropTypes.bool,
 };
 
-export default WWebsiteAppResults;
+export default WebsiteAppResults;

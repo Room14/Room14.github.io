@@ -25,16 +25,16 @@ const WebsiteAppFileContent = ({
           __html: fileContent.replace(/(<? *script)/gi, "illegalScript"),
         }}
       />
-      <div class='text-right'>
-      <button
-        className="btn btn-sm btn-outline-success m-2 text-right"
-        name="returnToList"
-        onClick={handleFieldChange}
-        disabled={loading}
-      >
-        Back to list
-        {loading && <i className="fas fa-spinner fa-spin ml-1"></i>}
-      </button>
+      <div className="text-right">
+        <button
+          className="btn btn-sm btn-outline-success m-2 text-right"
+          name="returnToList"
+          onClick={handleFieldChange}
+          disabled={loading}
+        >
+          Back to list
+          {loading && <i className="fas fa-spinner fa-spin ml-1"></i>}
+        </button>
       </div>
     </div>
   );

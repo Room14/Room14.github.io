@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import WebsiteAppResults from "./WebsiteAppResults";
 import WebsiteAppFileContent from "./WebsiteAppFileContent";
-
+import DailyChallenges from "./DailyChallenges";
 const WebsiteAppPresent = ({
   config,
   keyword,
@@ -11,8 +11,12 @@ const WebsiteAppPresent = ({
   fileContent,
   handleFieldChange,
   handleSearchSubmit,
+  handleAnswerSubmit,
   loading,
+  answer,
+  submittedAnswer,
 }) => {
+  console.log(config);
   return (
     <div className="mt-1 mb-5 pt-5 pb-5 pl-4 text-dark">
       <div className="text-primary mb-3">
@@ -86,6 +90,16 @@ const WebsiteAppPresent = ({
           loading={loading}
         />
       )}
+      <DailyChallenges
+        challenges={config && config.challenges}
+        handleFieldChange={handleFieldChange}
+        handleAnswerSubmit={handleAnswerSubmit}
+        answer={answer}
+        submittedAnswer={submittedAnswer}
+        // searchResults={searchResults}
+        // handleFieldChange={handleFieldChange}
+        // loading={loading}
+      />
     </div>
   );
 };

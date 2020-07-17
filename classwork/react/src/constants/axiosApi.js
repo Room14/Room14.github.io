@@ -91,11 +91,17 @@ export const githubRawFile = axios.create({
   },
 });
 
-
 // get fairfield notices form offical school website
 export const getFisJson = axios.create({
-  baseURL:
-    "https://www.fairfieldintermediate.school.nz/",
+  baseURL: "https://www.fairfieldintermediate.school.nz/",
+  timeout: 3000,
+  responseType: "json",
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
+export const getAnyJson = axios.create({
+  baseURL: "https://",
   timeout: 3000,
   responseType: "json",
   headers: {
@@ -106,22 +112,18 @@ export const getFisJson = axios.create({
 // api.openweathermap.org/data/2.5/weather?id=2190324&appid=2e47754a16a8eeba697daad62980819d
 // https://api.openweathermap.org/data/2.5/onecall?lon=175.287689&lat=-37.787689&exclude=&appid=2e47754a16a8eeba697daad62980819d
 
-
-
 export const getWeatherJson = axios.create({
-  baseURL:
-    "http://api.openweathermap.org/data/2.5/",
+  baseURL: "http://api.openweathermap.org/data/2.5/",
   timeout: 3000,
   responseType: "json",
-  
+
   params: {
     appid: "2e47754a16a8eeba697daad62980819d",
-    units:"metric"
+    units: "metric",
   },
   headers: {
     "Content-Type": "application/json",
   },
 });
-
 
 export default packagistApi;

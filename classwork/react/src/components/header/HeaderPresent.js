@@ -27,7 +27,7 @@ const HeaderPresent = () => {
 
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
           <ul className="navbar-nav">
-          <li className="nav-item">
+            <li className="nav-item">
               <NavLink
                 to={REACTPATH.Weather}
                 className="nav-link"
@@ -63,8 +63,19 @@ const HeaderPresent = () => {
                 className="nav-link"
                 onClick={() => hideNavbar("")}
               >
-               <i class="far fa-calendar-alt mr-1"></i>
+                <i className="far fa-calendar-alt mr-1"></i>
                 FIS Calendar
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
+              <NavLink
+                to={REACTPATH.Rm14newsletters}
+                className="nav-link"
+                onClick={() => hideNavbar("")}
+              >
+                <i className="fas fa-paper-plane mr-1"></i>
+                Room 14 Newsletters
               </NavLink>
             </li>
 
@@ -74,7 +85,7 @@ const HeaderPresent = () => {
                 className="nav-link"
                 onClick={() => hideNavbar("")}
               >
-                <i class="fas fa-graduation-cap mr-1"></i>
+                <i className="fas fa-graduation-cap mr-1"></i>
                 Room 14 Classwork
               </NavLink>
             </li>
