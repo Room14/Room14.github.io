@@ -95,7 +95,7 @@ const HeaderPresent = () => {
                 onClick={() => hideNavbar("")}
               >
                 <i className="fas fa-sign-in-alt mr-1"></i>
-                Room 14 Classwork
+                Login Page
               </a>
             </li>
           </ul>
