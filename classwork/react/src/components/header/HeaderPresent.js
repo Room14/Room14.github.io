@@ -15,7 +15,7 @@ const HeaderPresent = () => {
           <i className="fab fa-react mr-1"></i>
           Room 14
         </NavLink>
-
+        <h3 className="text-center text-danger">Happy Birthday Scott!</h3>
         <button
           className="navbar-toggler"
           type="button"
