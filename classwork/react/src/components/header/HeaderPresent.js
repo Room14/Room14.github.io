@@ -10,12 +10,13 @@ const HeaderPresent = () => {
   return (
     <div className="container-fluid top-container header">
       <h1 className="text-center text-success">Room 14 FIS</h1>
+      <h6 className="text-center text-danger">Happy Birthday Scott!</h6>
+
       <nav className="navbar navbar-expand-md bg-dark navbar-dark">
         <NavLink to="/" className="navbar-brand">
           <i className="fab fa-react mr-1"></i>
           Room 14
         </NavLink>
-        <h3 className="text-center text-danger">Happy Birthday Scott!</h3>
         <button
           className="navbar-toggler"
           type="button"
