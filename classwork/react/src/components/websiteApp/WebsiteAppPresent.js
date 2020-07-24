@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import WebsiteAppResults from "./WebsiteAppResults";
 import WebsiteAppFileContent from "./WebsiteAppFileContent";
 import DailyChallenges from "./DailyChallenges";
+import moment from "moment";
 const WebsiteAppPresent = ({
   config,
   keyword,
@@ -16,12 +17,23 @@ const WebsiteAppPresent = ({
   answer,
   submittedAnswer,
 }) => {
-  console.log(config);
+  if (config) {
+    console.log(moment().format("DD/MM/YYYY") == config.special_days.date);
+  }
   return (
     <div className="mt-1 mb-5 pt-5 pb-5 pl-4 text-dark">
       <div className="text-primary mb-3">
         <h2>{config && config.siteName}</h2>
-        <div className="text-secondary">{config && config.siteDescription}</div>
+        <h2>
+          <div className="text-primary">
+            {config &&
+              (moment().format("DD/MM/YYYY") == config.special_days.date ? (
+                <div class="text-danger">{config.special_days.text}</div>
+              ) : (
+                config.siteDescription
+              ))}
+          </div>
+        </h2>
       </div>
 
       <form onSubmit={handleSearchSubmit}>
