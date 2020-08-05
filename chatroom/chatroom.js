@@ -60,19 +60,19 @@ drone.on("close", (event) => {
 drone.on("error", (error) => {
   console.error(error);
 });
-var item = "";
-var membersArr = [];
-for (i = 0; i < members.length; i++) {
-  item = members[i].clientData.name;
-  membersArr += item.toLowerCase();
+var membersArr = membersArrFunc();
+function membersArrFunc() {
+  var item = "";
+  var membersArr = [];
+  for (i = 0; i < members.length; i++) {
+    item = members[i].clientData.name;
+    membersArr += item.toLowerCase();
+  }
+  return membersArr;
 }
+
 function getRandomName() {
   const name = window.prompt("What name do you want?");
-  if (membersArr.includes(name.toLowerCase())) {
-    while (membersArr.includes(name.toLowerCase())) {
-      name = window.prompt("Please retry, do not impersonate.");
-    }
-  }
   console.log(members);
   return name;
 }
