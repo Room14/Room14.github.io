@@ -63,12 +63,6 @@ drone.on("error", (error) => {
 
 function getRandomName() {
   const name = window.prompt("What name do you want?");
-  if (members.includes(name)) {
-    while (members.includes(name)) {
-      window.prompt("please do not impersonate");
-      const name = window.prompt("What name do you want?");
-    }
-  }
   return name;
 }
 
