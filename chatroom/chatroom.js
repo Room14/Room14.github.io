@@ -63,13 +63,13 @@ drone.on("error", (error) => {
 
 function getRandomName() {
   const name = window.prompt("What name do you want?");
+  console.log(members);
   return name;
 }
 
 function getRandomColor() {
   const colour = window.prompt("What colour name do you want?");
-  return colour
-  
+  return colour;
 }
 
 //------------- DOM STUFF
