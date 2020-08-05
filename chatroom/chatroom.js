@@ -60,14 +60,13 @@ drone.on("close", (event) => {
 drone.on("error", (error) => {
   console.error(error);
 });
-
+var item = "";
+var membersArr = [];
+for (i = 0; i < members.length; i++) {
+  item = members[i].clientData.name;
+  membersArr += item.toLowerCase();
+}
 function getRandomName() {
-  var item = "";
-  var membersArr = [];
-  for (i = 0; i < members.length; i++) {
-    item = members[i].clientData.name;
-    membersArr += item.toLowerCase();
-  }
   const name = window.prompt("What name do you want?");
   if (membersArr.includes(name.toLowerCase())) {
     while (membersArr.includes(name.toLowerCase())) {
