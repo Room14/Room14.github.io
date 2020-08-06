@@ -73,7 +73,7 @@ function membersArrFunc() {
 
 function getRandomName() {
   const name = window.prompt("What name do you want?");
-  console.log(members);
+  
   return name;
 }
 
