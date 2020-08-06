@@ -74,7 +74,11 @@ function membersArrFunc() {
 function getRandomName() {
   const name = window.prompt("What name do you want?");
   console.log(members);
-  return name;
+  if (name == "aaron") {
+    return "a very bad person who wants to impersonate aaron";
+  } else {
+    return name;
+  }
 }
 
 function getRandomColor() {
@@ -93,11 +97,23 @@ const DOM = {
 };
 
 DOM.form.addEventListener("submit", sendMessage);
-
+var colors = [
+  "red",
+  "orange",
+  "yellow",
+  "green",
+  "aqua",
+  "teal",
+  "blue",
+  "purple",
+];
 function sendMessage() {
   const value = DOM.input.value;
   if (value === "") {
     return;
+  }
+  if (value === "!randomColor") {
+    members[0].clientData.color = colors[Math.floor(Math.random() * 8)];
   }
   DOM.input.value = "";
   drone.publish({
