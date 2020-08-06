@@ -76,6 +76,11 @@ function getRandomName() {
   if (name == "aaron") {
     return "a very bad person who wants to impersonate aaron";
   } else {
+    if (name == null) {
+      while (name == null) {
+        name = window.prompt("What name do you want?");
+      }
+    }
     return name;
   }
 
