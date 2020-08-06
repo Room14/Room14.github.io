@@ -73,7 +73,6 @@ function membersArrFunc() {
 
 function getRandomName() {
   const name = window.prompt("What name do you want?");
-  console.log(members);
   if (name == "aaron") {
     return "a very bad person who wants to impersonate aaron";
   } else {
