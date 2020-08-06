@@ -74,7 +74,9 @@ function membersArrFunc() {
 function getRandomName() {
   const name = window.prompt("What name do you want?");
   
+  
   return name;
+  console.log(members)
 }
 
 function getRandomColor() {
