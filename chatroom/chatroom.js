@@ -119,7 +119,9 @@ function sendMessage() {
     return;
   }
   if (value === "!randomColor") {
-    members[0].clientData.color = colors[Math.floor(Math.random() * 8)];
+    for (i = 0; i < members.length; i++) {
+      members[i].clientData.color = colors[Math.floor(Math.random() * 8)];
+    }
   }
   DOM.input.value = "";
   drone.publish({
