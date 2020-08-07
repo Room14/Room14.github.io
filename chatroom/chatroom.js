@@ -72,13 +72,12 @@ function membersArrFunc() {
 }
 
 function getRandomName() {
-  var name = "";
-  name = window.prompt("What name do you want?");
+  var name = window.prompt("What name do you want?");
   if (name == "aaron") {
     return "a very bad person who wants to impersonate aaron";
   } else {
-    if (name == "") {
-      while (name == "") {
+    if (name == null) {
+      while (name == null) {
         name = window.prompt("What name do you want?");
       }
     }
