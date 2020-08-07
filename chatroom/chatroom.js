@@ -118,7 +118,7 @@ function sendMessage() {
   if (value === "") {
     return;
   }
-  if (value === "!randomColor") {
+  if (value == "!randomColor") {
     for (i = 0; i < members.length; i++) {
       members[i].clientData.color = colors[Math.floor(Math.random() * 8)];
     }
